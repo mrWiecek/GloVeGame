@@ -1,7 +1,7 @@
 export default interface Test {
     userId: number;
     id: number;
-    description: string;
+    title: string;
     completed: boolean;
   }
   

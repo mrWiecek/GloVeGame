@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Request
-import json
 
 router = APIRouter()
 
@@ -12,7 +11,7 @@ payload = {
 
 @router.get("/")
 async def root():
-    return json.dumps(payload)
+    return payload
 
 @router.get("/hello")
 async def hello():
