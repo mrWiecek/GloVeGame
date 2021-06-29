@@ -1,10 +1,18 @@
 from fastapi import APIRouter, Request
+import json
 
 router = APIRouter()
 
+payload = {
+	"userId": 1,
+	"id": 1,
+	"title": "delectus aut autem",
+	"completed": False
+}
+
 @router.get("/")
 async def root():
-    return {"Hello": "World"}
+    return json.dumps(payload)
 
 @router.get("/hello")
 async def hello():

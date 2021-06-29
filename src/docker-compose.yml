@@ -14,7 +14,7 @@ services:
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
-    labels: 
+    labels:
       - "traefik.enable=true"
   # mongodb:
   #   image: mongo:latest
@@ -27,14 +27,19 @@ services:
   #   volumes:
   #     - ./mongo/db:/data/db
   #   labels: 
-  #     - "traefik.enabled=true"
+  #     - "traefik.enable=true"
   api:
     build: ./api
     labels: 
-      - "traefik.enable=true"
-      - "traefik.http.routers.api-http.rule=Host(`api.localhost`)"
-      - "traefik.http.routers.api-http.rule=PathPrefix(`/api`) || PathPrefix(`/docs`) || PathPrefix(`/redoc`)"
-      - "traefik.http.middlewares.api-stripprefix.stripprefix.prefixes=/api"
-      - "traefik.http.middlewares.api-stripprefix.stripprefix.forceSlash=false"
-          # Apply the middleware named `foo-add-prefix` to the router named `router1`
-      - "traefik.http.routers.api-http.middlewares=api-stripprefix@docker"
+      - traefik.enable=true
+      - traefik.http.routers.api-http.rule=Host(`api.localhost`)
+      - traefik.http.routers.api-http.rule=PathPrefix(`/api`) || PathPrefix(`/docs`) || PathPrefix(`/redoc`)
+      - traefik.http.routers.api-http.middlewares=api-stripprefix@docker
+      - traefik.http.middlewares.api-stripprefix.stripprefix.prefixes=/api
+      - traefik.http.middlewares.api-stripprefix.stripprefix.forceSlash=false
+  frontend:
+    build: ./frontend
+    labels: 
+      - traefik.enable=true
+      - traefik.http.routers.frontend-http.rule=PathPrefix(`/`)
+

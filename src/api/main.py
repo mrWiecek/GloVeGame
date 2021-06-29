@@ -10,6 +10,5 @@ app = FastAPI(
 
 app.include_router(
     base.router,
-    tags=["base"],
-    # prefix="/api"
+    tags=["base"]
 )
