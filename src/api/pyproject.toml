@@ -12,6 +12,8 @@ numpy = "^1.21.0"
 torchtext = "^0.10.0"
 
 [tool.poetry.dev-dependencies]
+fastapi = "^0.65.2"
+uvicorn = "^0.14.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
