@@ -1,8 +1,8 @@
 [[package]]
 name = "asgiref"
-version = "3.4.0"
+version = "3.4.1"
 description = "ASGI specs, helper code, and adapters"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -29,7 +29,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "click"
 version = "8.0.1"
 description = "Composable command line interface toolkit"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -40,7 +40,7 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -48,7 +48,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "fastapi"
 version = "0.65.2"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -66,7 +66,7 @@ test = ["pytest (==5.4.3)", "pytest-cov (==2.10.0)", "pytest-asyncio (>=0.14.0,<
 name = "h11"
 version = "0.12.0"
 description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -77,6 +77,20 @@ description = "Internationalized Domain Names in Applications (IDNA)"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "motor"
+version = "2.4.0"
+description = "Non-blocking MongoDB driver for Tornado or asyncio"
+category = "main"
+optional = false
+python-versions = ">=3.5.2"
+
+[package.dependencies]
+pymongo = ">=3.11,<4"
+
+[package.extras]
+encryption = ["pymongo[encryption] (>=3.11,<4)"]
 
 [[package]]
 name = "numpy"
@@ -106,7 +120,7 @@ test = ["pytest (>=5.0.1)", "pytest-xdist", "hypothesis (>=3.58)"]
 name = "pydantic"
 version = "1.8.2"
 description = "Data validation and settings management using python 3.6 type hinting"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6.1"
 
@@ -184,7 +198,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "starlette"
 version = "0.14.2"
 description = "The little ASGI library that shines."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -254,7 +268,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 name = "uvicorn"
 version = "0.14.0"
 description = "The lightning-fast ASGI server."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -269,12 +283,12 @@ standard = ["websockets (>=9.1)", "httptools (>=0.2.0,<0.3.0)", "watchgod (>=0.6
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "3c31b13de15ef99c9cb3eb02765dd526b720b418418d99ce6f547ea44ff03837"
+content-hash = "a5d5fe9ebe375b4f60129265a853837f96a3482f9c51d950d90c2dec654b46e6"
 
 [metadata.files]
 asgiref = [
-    {file = "asgiref-3.4.0-py3-none-any.whl", hash = "sha256:d36fa91dd90e3aa3c81a6bd426ccc8fb20bd3d22b0cf14a12800289e9c3e2563"},
-    {file = "asgiref-3.4.0.tar.gz", hash = "sha256:05914d0fa65a21711e732adc6572edad6c8da5f1435c3f0c060689ced5e85195"},
+    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
+    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
 ]
 certifi = [
     {file = "certifi-2021.5.30-py2.py3-none-any.whl", hash = "sha256:50b1e4f8446b06f41be7dd6338db18e0990601dce795c2b1686458aa7e8fa7d8"},
@@ -303,6 +317,10 @@ h11 = [
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
     {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
+]
+motor = [
+    {file = "motor-2.4.0-py3-none-any.whl", hash = "sha256:839c11a43897dbec8e5ba0e87a9c9b877239803126877b2efa5cef89aa6b687a"},
+    {file = "motor-2.4.0.tar.gz", hash = "sha256:1196db507142ef8f00d953efa2f37b39335ef2d72af6ce4fbccfd870b65c5e9f"},
 ]
 numpy = [
     {file = "numpy-1.21.0-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:d5caa946a9f55511e76446e170bdad1d12d6b54e17a2afe7b189112ed4412bb8"},

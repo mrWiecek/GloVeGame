@@ -166,3 +166,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+
+#mongo stuff
+src/mongo/db/*

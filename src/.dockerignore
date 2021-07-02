@@ -1,0 +1,5 @@
+*mongo/*
+*node_modules/*
+*public/*
+*.venv/*
+*__pycache__/*
