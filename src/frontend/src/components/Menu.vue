@@ -32,7 +32,7 @@
             <v-card-text class="py-10">
               <p class="text-h3 text--primary">{{ card.title }}</p>
               <div class="text--primary">
-                {{card.description}}
+                {{ card.description }}
               </div>
             </v-card-text>
           </v-card>
