@@ -1,4 +1,4 @@
-# PJATK_BGD
+# GloVe Game
 
-This is repo for BigData Project for PJATK studies
+Project created as an assignment to BGD subject on PJATK university
 
