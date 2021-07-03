@@ -170,3 +170,7 @@ cython_debug/
 
 #mongo stuff
 src/mongo/db/*
+
+
+*.docx*
+/*.jpg

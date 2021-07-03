@@ -6,23 +6,23 @@ from routers import base, samples, vectors
 app = FastAPI(
     title="Hello",
     openapi_url="/docs/openapi.json",
-    # root_path='/api'
+    root_path='/api'
 )
 
 app.include_router(
     base.router,
-    prefix='/api',
+    # prefix='/api',
     tags=["base"]
 )
 
 app.include_router(
     vectors.router,
-    prefix='/api',
+    # prefix='/api',
     tags=["vectors"]
 )
 
 app.include_router(
     samples.router,
-    prefix='/api/analogy',
+    # prefix='/analogy',
     tags=["samples"]
 )

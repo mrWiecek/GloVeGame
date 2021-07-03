@@ -94,7 +94,7 @@
             height="200"
           >
             <v-card-text class="d-flex align-center justify-center">
-              <p class="text-h2 text--primary">{{wordAsTo}}</p>
+              <p class="text-h2 text--primary">{{wordAsTo.name}}</p>
             </v-card-text>
           </v-card>
         </v-col>
@@ -143,10 +143,10 @@ import DataService from "../services/dataService";
 
 @Component
 export default class Analogy extends Vue {
-  wordIs: string;
-  wordTo: string;
-  wordAsIs: string;
-  wordAsTo: string;
+  wordIs: string = "";
+  wordTo: string = "";
+  wordAsIs: string = "";
+  wordAsTo: string = "";
 
   async getAnalogy(): Promise<any> {
     console.log("Hello");
